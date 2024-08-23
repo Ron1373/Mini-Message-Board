@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title%></title>
+  </head>
+  <body>
+    <ul>
+      <% for (let message of messages){%> <% let index=0;%>
+      <li>
+        User: <%=message.user%>
+        <br />
+        Text: <%=message.text%>
+        <br />
+        Date added: <%=message.added%>
+      </li>
+      <a href="/<%=index%>">Open</a>
+      <%index++;%> <% }%>
+    </ul>
+    <a href="/new">Add new message</a>
+  </body>
+</html>
